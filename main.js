@@ -37,19 +37,22 @@ while(numeri.length < 5){
 setTimeout(() => {
     for (let i = 0; i<5; i++){
         let numeriIseriti = parseInt(prompt("inserisci uno alla volta i numeri che ti ricordi"));
-        container.innerHTML=`
-        <span> i numeri indovinati sono:</span>
-        <div id="numeri">
-            <Span id="numerirand">
-                ${numeriIndovinati}
-            </Span>
-        </div>
-        `
         if(numeriIseriti === numeri[i]){
             numeriIndovinati.push(numeriIseriti)   
             console.log("hai indovinato questi numeri :",numeriIndovinati);
-        }else if(numeriIseriti !== numeri);
-        console.log("questi sono i numeri inseriti: ",numeriIseriti);
+            container.innerHTML=`
+            <span> i numeri indovinati sono:</span>
+            <div id="numeri">
+                <Span id="numerirand">
+                    ${numeriIndovinati}
+                </Span>
+            </div>
+            `
+        }else{
+            container.innerHTML=`
+            <span> SEI UN PO SCARSO NON HAI INDOVINATO NIENTE</span>
+            ` 
+        }
     }
 }, 3000); 
 
