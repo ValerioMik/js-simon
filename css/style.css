@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cadetblue;
+}
+
+h1{
+    text-align: center;
+}
+
+#container{
+    width: 306px;
+    height: 92px;
+    background-color: aquamarine;
+    margin: 40px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 620px;
+}
+
+
+#numerirand{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.nascosto{
+    display: none;
+}

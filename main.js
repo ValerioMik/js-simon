@@ -14,26 +14,43 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
     //se li ha indovinati tutti stampo un messaggio di complimenti
 let numeri = [];
 let numeriIndovinati = [];
+const container = document.getElementById("container")
+
     
 while(numeri.length < 5){
     let numeriCasuali = Math.floor(Math.random() * 100) + 1;
     if(numeri.includes !== numeriCasuali) 
+    numeri.forEach((element) => {
+        container.innerHTML =`
+        <span>RICORDA I NUMERI:</span>
+        <div id="numeri">
+            <Span id="numerirand">
+                ${numeri}
+            </Span>
+        </div>
+
+        `
+    });
     numeri.push(numeriCasuali);
 };console.log(numeri);
 
 setTimeout(() => {
     for (let i = 0; i<5; i++){
         let numeriIseriti = parseInt(prompt("inserisci uno alla volta i numeri che ti ricordi"));
+        container.innerHTML=`
+        <span> i numeri indovinati sono:</span>
+        <div id="numeri">
+            <Span id="numerirand">
+                ${numeriIndovinati}
+            </Span>
+        </div>
+        `
         if(numeriIseriti === numeri[i]){
-            numeriIndovinati.push(numeriIseriti)
+            numeriIndovinati.push(numeriIseriti)   
             console.log("hai indovinato questi numeri :",numeriIndovinati);
         }else if(numeriIseriti !== numeri);
         console.log("questi sono i numeri inseriti: ",numeriIseriti);
     }
 }, 3000); 
-
-
-    
-
 
 
