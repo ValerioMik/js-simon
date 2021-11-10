@@ -36,7 +36,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
     setTimeout(() => {
         for (let i = 0; i<5; i++){
             let numeriIseriti = parseInt(prompt("inserisci uno alla volta i numeri che ti ricordi"));
-            if(numeriIseriti === numeri[i]){
+            if(numeri.includes(numeriIseriti)){
                 numeriIndovinati.push(numeriIseriti)   
                 container.innerHTML=`
             <span>numeri indovinati sono:</span>
@@ -47,9 +47,9 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
             </div>
             `
                 console.log("hai indovinato questi numeri :",numeriIndovinati);
-            }else if(numeriIseriti !== numeri);
-            console.log("questi sono i numeri sbagliati: ",numeriIseriti);
-        }
+            }else if(
+            console.log("questi sono i numeri sbagliati: ",numeriIseriti));
+            }
     }, 3000); 
     
    
